@@ -11,9 +11,9 @@ $workshop = $conn->query("SELECT * FROM workshops WHERE id = $workshopId")->fetc
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Zara Tech - WorkShop Application</title>
-  <meta name="description" content="Apply for internship opportunities at Zara Tech in web development, design, AI, and more.">
-  <meta name="keywords" content="Zara Tech, internship, application, tech internship, web development, design, AI, ML">
+  <title>XOVENTA - WorkShop Application</title>
+  <meta name="description" content="Apply for internship opportunities at XOVENTA in web development, design, AI, and more.">
+  <meta name="keywords" content="XOVENTA, internship, application, tech internship, web development, design, AI, ML">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ8BY3WBPP"></script>
@@ -167,7 +167,7 @@ $workshop = $conn->query("SELECT * FROM workshops WHERE id = $workshopId")->fetc
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo.png" alt="">
-        <!-- <h1 class="sitename">Zara Tech</h1> -->
+        <!-- <h1 class="sitename">XOVENTA</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -349,7 +349,7 @@ $workshop = $conn->query("SELECT * FROM workshops WHERE id = $workshopId")->fetc
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Zara Tech</span>
+            <span class="sitename">XOVENTA</span>
           </a>
           <div class="footer-contact pt-3">
             <p>Located in Perambalur</p>
@@ -396,9 +396,9 @@ $workshop = $conn->query("SELECT * FROM workshops WHERE id = $workshopId")->fetc
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">Zara Tech</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">XOVENTA</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        Designed by <a href="">Zara Tech</a>
+        Designed by <a href="">XOVENTA</a>
       </div>
     </div>
   </footer>

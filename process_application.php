@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         // Send confirmation email
         $to = $email;
-        $subject = "Zara Tech Internship Application Received";
+        $subject = "XOVENTA Internship Application Received";
         
         $message = "
         <html>
@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div style='padding: 20px; border: 1px solid #ddd; background-color: #f9f9f9;'>
                     <p>Dear $fullName,</p>
-                    <p>We have received your application for the <strong>$specificProgram</strong> internship program at Zara Tech.</p>
+                    <p>We have received your application for the <strong>$specificProgram</strong> internship program at XOVENTA.</p>
                     <p>Our team will review your application and get back to you soon. Here's a summary of your application:</p>
                     <ul>
                         <li><strong>Internship Field:</strong> $internshipField</li>
@@ -128,10 +128,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <li><strong>Preferred Start Date:</strong> $startDate</li>
                     </ul>
                     <p>If you have any questions, feel free to contact us at <a href='mailto:zaratechpvt001@gmail.com'>zaratechpvt001@gmail.com</a> or call us at +91 9566060511.</p>
-                    <p>Best Regards,<br>The Zara Tech Team</p>
+                    <p>Best Regards,<br>The XOVENTA Team</p>
                 </div>
                 <div style='text-align: center; padding: 10px; font-size: 12px; color: #666;'>
-                    <p>© 2024 Zara Tech. All Rights Reserved.</p>
+                    <p>© 2024 XOVENTA. All Rights Reserved.</p>
                 </div>
             </div>
         </body>
@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Always set content-type when sending HTML email
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "From: Zara Tech <zaratechpvt001@gmail.com>" . "\r\n";
+        $headers .= "From: XOVENTA <zaratechpvt001@gmail.com>" . "\r\n";
         
         // Send email
         mail($to, $subject, $message, $headers);

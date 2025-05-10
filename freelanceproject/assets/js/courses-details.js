@@ -3,7 +3,7 @@
   <div class="row gy-4">
     <div class="col-lg-4 col-md-6 footer-about">
       <a href="index.html" class="logo d-flex align-items-center">
-        <span class="sitename">Zara Tech</span>
+        <span class="sitename">XOVENTA</span>
       </a>
       <div class="footer-contact pt-3">
         <p>Located in Perambalur</p>
@@ -50,9 +50,9 @@
 </div>
 
 <div class="container copyright text-center mt-4">
-  <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">Zara Tech</strong> <span>All Rights Reserved</span></p>
+  <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">XOVENTA</strong> <span>All Rights Reserved</span></p>
   <div class="credits">
-    Designed by <a href="">Zara Tech</a>
+    Designed by <a href="">XOVENTA</a>
   </div>
 </div>
 </footer>
