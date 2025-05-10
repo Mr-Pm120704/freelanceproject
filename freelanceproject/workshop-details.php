@@ -58,9 +58,9 @@ $conn->close();
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title><?php echo htmlspecialchars($workshop['name'] ?? 'Workshop Details'); ?> - Zara Tech</title>
+  <title><?php echo htmlspecialchars($workshop['name'] ?? 'Workshop Details'); ?> - XOVENTA</title>
   <meta name="description" content="<?php echo htmlspecialchars($workshop['short_description'] ?? ''); ?>">
-  <meta name="keywords" content="Zara Tech, <?php echo htmlspecialchars($workshop['name'] ?? 'Workshop'); ?>, workshops, training, education">
+  <meta name="keywords" content="XOVENTA, <?php echo htmlspecialchars($workshop['name'] ?? 'Workshop'); ?>, workshops, training, education">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ8BY3WBPP"></script>
@@ -112,7 +112,7 @@ $conn->close();
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="Zara Tech Logo">
+        <img src="assets/img/logo.png" alt="XOVENTA Logo">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -416,7 +416,7 @@ $conn->close();
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Zara Tech</span>
+            <span class="sitename">XOVENTA</span>
           </a>
           <div class="footer-contact pt-3">
             <p>Located in Perambalur</p>
@@ -463,9 +463,9 @@ $conn->close();
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">Zara Tech</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">XOVENTA</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        Designed by <a href="">Zara Tech</a>
+        Designed by <a href="">XOVENTA</a>
       </div>
     </div>
   </footer>
