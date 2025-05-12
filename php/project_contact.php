@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
     if ($stmt->execute()) {
         echo "<script>
                 alert('Your project request has been submitted successfully!');
-                window.location.href = 'index.html'; // ✅ Change this if needed
+                window.location.href = '../html/index.html'; // ✅ Change this if needed
               </script>";
     } else {
         echo "<script>

@@ -29,7 +29,7 @@ $stmt->bind_param("sssssss", $name, $number, $email, $service_category, $softwar
 if ($stmt->execute()) {
     echo "<script>
             alert('Your software installation has been enrolled successfully!');
-            window.location.href = 'index.html';
+            window.location.href = '../html/index.html';
           </script>";
   } else {
     echo "<script>

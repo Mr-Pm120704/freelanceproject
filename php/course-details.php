@@ -7,7 +7,7 @@ $course_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 // If no valid ID provided, redirect to all courses page
 if ($course_id <= 0) {
-    header("Location: all-courses.html");
+    header("Location: ../html/all-courses.html");
     exit;
 }
 
@@ -20,7 +20,7 @@ $course_result = $stmt->get_result();
 
 // Check if course exists
 if ($course_result->num_rows === 0) {
-    header("Location: all-courses.html");
+    header("Location: ../html/all-courses.html");
     exit;
 }
 
@@ -81,8 +81,8 @@ $conn->close();
   <!-- End Google Tag Manager -->
 
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/logo.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -90,18 +90,18 @@ $conn->close();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
   <!-- Courses CSS File -->
-  <link href="assets/css/courses.css" rel="stylesheet">
+  <link href="../assets/css/courses.css" rel="stylesheet">
   <!-- Course Details CSS File -->
-  <link href="assets/css/course-details.css" rel="stylesheet">
+  <link href="../assets/css/course-details.css" rel="stylesheet">
 </head>
 
 <body>
@@ -113,29 +113,29 @@ $conn->close();
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="XOVENTA Logo">
+        <img src="../assets/img/logo.png" alt="XOVENTA Logo">
         <!-- <h1 class="sitename">XOVENTA</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Our Courses</a></li>
+          <li><a href="../html/index.html">Home</a></li>
+          <li><a href="../html/index.html#about">About</a></li>
+          <li><a href="../html/index.html#features">Our Courses</a></li>
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="all-courses.html" class="active">All Courses</a></li>
-              <li><a href="#">Internship</a></li>
-              <li><a href="#">Workshop</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Software Installation</a></li>
+              <li><a href="../html/all-courses.html" class="active">All Courses</a></li>
+              <li><a href="../html/internships.html">Internship</a></li>
+              <li><a href="../html/all-workshops.html">Workshop</a></li>
+              <li><a href="../html/projects.html">Projects</a></li>
+              <li><a href="../html/software_install.html">Software Installation</a></li>
             </ul>
           </li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#team">Team</a></li>          
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="../html/index.html#gallery">Gallery</a></li>
+          <li><a href="../html/index.html#team">Team</a></li>          
+          <li><a href="../html/index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -154,8 +154,8 @@ $conn->close();
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="all-courses.html">All Courses</a></li>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/all-courses.html">All Courses</a></li>
             <li><?php echo htmlspecialchars($course['name'] ?? 'Course Details'); ?></li>
           </ol>
         </div>
@@ -169,9 +169,9 @@ $conn->close();
           <div class="col-lg-8">
             <div class="course-image animate-image">
               <?php if (!empty($course['image'])): ?>
-                <img src="assets/img/courses/<?php echo htmlspecialchars($course['image']); ?>" alt="<?php echo htmlspecialchars($course['name']); ?>" class="img-fluid">
+                <img src="../assets/img/courses/<?php echo htmlspecialchars($course['image']); ?>" alt="<?php echo htmlspecialchars($course['name']); ?>" class="img-fluid">
               <?php else: ?>
-                <img src="assets/img/courses/default-course.jpg" alt="<?php echo htmlspecialchars($course['name'] ?? 'Course'); ?>" class="img-fluid">
+                <img src="../assets/img/courses/default-course.jpg" alt="<?php echo htmlspecialchars($course['name'] ?? 'Course'); ?>" class="img-fluid">
               <?php endif; ?>
             </div>
             
@@ -429,7 +429,7 @@ $conn->close();
           </div>
 
           <div class="col-lg-8">
-            <form action="contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="../php/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
@@ -472,7 +472,7 @@ $conn->close();
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="../html/index.html" class="logo d-flex align-items-center">
             <span class="sitename">XOVENTA</span>
           </a>
           <div class="footer-contact pt-3">
@@ -493,9 +493,9 @@ $conn->close();
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About us</a></li>
-            <li><a href="all-courses.html">All Courses</a></li>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/index.html#about">About us</a></li>
+            <li><a href="../html/all-courses.html">All Courses</a></li>
             <li><a href="#">Terms of service</a></li>
             <li><a href="#">Privacy policy</a></li>
           </ul>
@@ -534,14 +534,14 @@ $conn->close();
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
   
   <!-- Course Details JS File -->
   <script>

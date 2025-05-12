@@ -1,35 +1,8 @@
 <?php
-$field = $_GET['field'] ?? '';
-$subfield = $_GET['subfield'] ?? '';
+$workshopId = $_GET['id'];
+require_once 'db-connection.php';
+$workshop = $conn->query("SELECT * FROM workshops WHERE id = $workshopId")->fetch_assoc();
 ?>
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <title>Internship Application Form</title>
-</head>
-<body>
-  <h2>Apply for Internship</h2>
-  <form action="submit_application.php" method="POST">
-   
-    <input type="hidden" name="field" value="<?= htmlspecialchars($field) ?>">
-    <input type="hidden" name="subfield" value="<?= htmlspecialchars($subfield) ?>">
-
-    <p><strong>Field:</strong> <?= htmlspecialchars($field) ?></p>
-    <p><strong>Subfield:</strong> <?= htmlspecialchars($subfield) ?></p>
-
-
-    <label>Name: <input type="text" name="name" required></label><br><br>
-    <label>Email: <input type="email" name="email" required></label><br><br>
-    <label>Phone: <input type="text" name="phone" required></label><br><br>
-
-    <button type="submit">Submit Application</button>
-  </form>
-</body>
-</html> -->
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +10,7 @@ $subfield = $_GET['subfield'] ?? '';
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>XOVENTA - Internship Application</title>
+  <title>XOVENTA - WorkShop Application</title>
   <meta name="description" content="Apply for internship opportunities at XOVENTA in web development, design, AI, and more.">
   <meta name="keywords" content="XOVENTA, internship, application, tech internship, web development, design, AI, ML">
 
@@ -59,8 +32,8 @@ $subfield = $_GET['subfield'] ?? '';
   <!-- End Google Tag Manager -->
 
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/logo.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -68,16 +41,16 @@ $subfield = $_GET['subfield'] ?? '';
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
   <!-- Courses CSS File -->
-  <link href="assets/css/courses.css" rel="stylesheet">
+  <link href="../assets/css/courses.css" rel="stylesheet">
   
   <style>
     .application-form {
@@ -190,29 +163,29 @@ $subfield = $_GET['subfield'] ?? '';
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
+        <img src="../assets/img/logo.png" alt="">
         <!-- <h1 class="sitename">XOVENTA</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Our Courses</a></li>
+          <li><a href="../html/index.html">Home</a></li>
+          <li><a href="../html/index.html#about">About</a></li>
+          <li><a href="../html/index.html#features">Our Courses</a></li>
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="all-courses.html">All Courses</a></li>
-              <li><a href="internships.html" class="active">Internship</a></li>
-              <li><a href="#">Workshop</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Software Installation</a></li>
+              <li><a href="../html/all-courses.html">All Courses</a></li>
+              <li><a href="../html/internships.html" class="active">Internship</a></li>
+              <li><a href="../html/all-workshops.html">Workshop</a></li>
+              <li><a href="../html/projects.html">Projects</a></li>
+              <li><a href="../html/software_install.html">Software Installation</a></li>
             </ul>
           </li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#team">Team</a></li>          
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="../html/index.html#gallery">Gallery</a></li>
+          <li><a href="../html/index.html#team">Team</a></li>          
+          <li><a href="../html/index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -224,15 +197,15 @@ $subfield = $_GET['subfield'] ?? '';
     <section class="page-title">
       <div class="heading">
         <div class="container">
-          <h1>Internship Application</h1>
-          <p>Take the first step towards your career growth by applying for our internship program. Fill out the form below to get started.</p>
+          <h1>WorkShop Application</h1>
+          <p>Take the first step towards your career growth by applying for our WorkShop program. Fill out the form below to get started.</p>
         </div>
       </div>
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="internships.html">Internships</a></li>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/internships.html">WorkShop</a></li>
             <li>Application Form</li>
           </ol>
         </div>
@@ -244,7 +217,7 @@ $subfield = $_GET['subfield'] ?? '';
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
           <h2>Apply Now</h2>
-          <div><span>Join Our</span> <span class="description-title">Internship Program</span></div>
+          <div><span>Join Our</span> <span class="description-title">WorkShop Program</span></div>
         </div>
 
         <?php
@@ -259,14 +232,41 @@ $subfield = $_GET['subfield'] ?? '';
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <div class="application-form">
-              <form action="process_application.php" method="POST" enctype="multipart/form-data">
+              <form action="submit-workshop-application.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="workshop_id" value="<?php echo $workshop['id']; ?>">
+                <div class="mb-3">
+                  <h2>Apply for <?php echo $workshop['name']; ?> Workshop</h2>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <div class="workshop-info">
+                        <p>Workshop: <?php echo $workshop['name']; ?></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                        <div class="workshop-info">
+                          <p>Duration: <?php echo $workshop['duration']; ?></p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label for="fullName" class="form-label required-field">Full Name</label>
-                      <input type="text" class="form-control" id="fullName" name="fullName" required>
+                      <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                   </div>
+                </div>
+
+                <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label for="email" class="form-label required-field">Email Address</label>
@@ -316,43 +316,6 @@ $subfield = $_GET['subfield'] ?? '';
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="internshipField" class="form-label required-field">Internship Field</label>
-                      <select class="form-select" id="internshipField" name="internshipField" required>
-                        <option value="">Select Field</option>
-                        <option value="Full Stack Intern">Full Stack Development</option>
-                        <option value="AI ML & Data Intern">AI, ML & Data Science</option>
-                        <option value="Design Intern">Design</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="specificProgram" class="form-label required-field">Specific Program</label>
-                      <select class="form-select" id="specificProgram" name="specificProgram" required>
-                        <option value="">Select Program</option>
-                        <!-- Options will be populated via JavaScript based on internshipField selection -->
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="duration" class="form-label required-field">Preferred Duration</label>
-                      <select class="form-select" id="duration" name="duration" required>
-                        <option value="">Select Duration</option>
-                        <option value="1 Month">1 Month</option>
-                        <option value="2 Months">2 Months</option>
-                        <option value="3 Months">3 Months</option>
-                        <option value="6 Months">6 Months</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-3">
                       <label for="startDate" class="form-label required-field">Preferred Start Date</label>
                       <input type="date" class="form-control" id="startDate" name="startDate" required>
                     </div>
@@ -360,32 +323,7 @@ $subfield = $_GET['subfield'] ?? '';
                 </div>
 
                 <div class="mb-3">
-                  <label for="skills" class="form-label required-field">Relevant Skills</label>
-                  <textarea class="form-control" id="skills" name="skills" rows="3" required></textarea>
-                </div>
-
-                <div class="mb-3">
-                  <label for="experience" class="form-label">Previous Experience (if any)</label>
-                  <textarea class="form-control" id="experience" name="experience" rows="3"></textarea>
-                </div>
-
-                <div class="mb-3">
-                  <label for="resume" class="form-label required-field">Upload Resume (PDF only)</label>
-                  <input type="file" class="form-control" id="resume" name="resume" accept=".pdf" required>
-                </div>
-
-                <div class="mb-3">
-                  <label for="linkedIn" class="form-label">LinkedIn Profile URL (if available)</label>
-                  <input type="url" class="form-control" id="linkedIn" name="linkedIn">
-                </div>
-
-                <div class="mb-3">
-                  <label for="portfolio" class="form-label">Portfolio/GitHub URL (if available)</label>
-                  <input type="url" class="form-control" id="portfolio" name="portfolio">
-                </div>
-
-                <div class="mb-3">
-                  <label for="whyJoin" class="form-label required-field">Why do you want to join this internship?</label>
+                  <label for="whyJoin" class="form-label required-field">Why do you want to join this WorkShop?</label>
                   <textarea class="form-control" id="whyJoin" name="whyJoin" rows="4" required></textarea>
                 </div>
 
@@ -409,7 +347,7 @@ $subfield = $_GET['subfield'] ?? '';
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="../html/index.html" class="logo d-flex align-items-center">
             <span class="sitename">XOVENTA</span>
           </a>
           <div class="footer-contact pt-3">
@@ -430,9 +368,9 @@ $subfield = $_GET['subfield'] ?? '';
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About us</a></li>
-            <li><a href="all-courses.html">All Courses</a></li>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/index.html#about">About us</a></li>
+            <li><a href="../html/all-courses.html">All Courses</a></li>
             <li><a href="#">Terms of service</a></li>
             <li><a href="#">Privacy policy</a></li>
           </ul>
@@ -471,15 +409,15 @@ $subfield = $_GET['subfield'] ?? '';
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
   <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
   
   <script>
     // Dynamic dropdown for specific programs based on internship field
