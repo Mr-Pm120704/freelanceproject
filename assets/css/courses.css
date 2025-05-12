@@ -4,11 +4,14 @@
 
 /* Page Title Styling */
 .page-title {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background-image: url('../img/xx.png');
+  background-repeat: repeat-x; /* Important for continuous movement */
+  background-position: 0% center; /* Start from the left */
   color: #ffffff;
   padding-top: 120px;
   overflow: hidden;
-  animation: fadeInBackground 1s ease-out forwards;
+  animation: fadeInBackground 1s ease-out forwards,
+             moveBackground 10s linear infinite; /* Added animation */
 }
 
 .page-title .heading {
@@ -72,25 +75,34 @@
 
 /* Simple Animations */
 @keyframes fadeInBackground {
-0% {
-  opacity: 0;
-}
-100% {
-  opacity: 1;
-}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-0% {
-  opacity: 0;
-  transform: translateY(50px);
-}
-100% {
-  opacity: 1;
-  transform: translateY(0);
-}
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Background Move Animation */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
 /*--------------------------------------------------------------
 # Courses Section Styling (No Changes)
 --------------------------------------------------------------*/
