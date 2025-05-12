@@ -122,11 +122,11 @@ $conn->close();
           <li><a href="index.html#features">Our Workshops</a></li>
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
+              <li><a href="all-courses.html">All Courses</a></li>
+              <li><a href="internships.html">Internship</a></li>
               <li><a href="all-workshops.html" class="active">All Workshops</a></li>
-              <li><a href="#">Internship</a></li>
-              <li><a href="#">Workshop</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Software Installation</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="software_install.html">Software Installation</a></li>
             </ul>
           </li>
           <li><a href="index.html#gallery">Gallery</a></li>
