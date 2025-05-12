@@ -7,7 +7,7 @@ $workshop_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 // If no valid ID provided, redirect to all workshops page
 if ($workshop_id <= 0) {
-    header("Location: all-workshops.html");
+    header("Location: ../html/all-workshops.html");
     exit;
 }
 
@@ -19,7 +19,7 @@ $stmt->execute();
 $workshop_result = $stmt->get_result();
 // Check if workshop exists
 if ($workshop_result->num_rows === 0) {
-    header("Location: all-workshops.html");
+    header("Location: ../html/all-workshops.html");
     exit;
 }
 
@@ -80,8 +80,8 @@ $conn->close();
   <!-- End Google Tag Manager -->
 
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/logo.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -89,17 +89,17 @@ $conn->close();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
   <!-- Courses CSS File -->
-  <link href="assets/css/courses.css" rel="stylesheet">
-  <link href="assets/css/courses-details.css" rel="stylesheet">
+  <link href="../assets/css/courses.css" rel="stylesheet">
+  <link href="../assets/css/courses-details.css" rel="stylesheet">
 </head>
 
 <body>
@@ -111,27 +111,27 @@ $conn->close();
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="XOVENTA Logo">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="XOVENTA Logo">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Our Workshops</a></li>
+          <li><a href="../html/index.html">Home</a></li>
+          <li><a href="../html/index.html#about">About</a></li>
+          <li><a href="../html/index.html#features">Our Workshops</a></li>
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="all-workshops.html" class="active">All Workshops</a></li>
-              <li><a href="#">Internship</a></li>
-              <li><a href="#">Workshop</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Software Installation</a></li>
+              <li><a href="../html/all-workshops.html" class="active">All Workshops</a></li>
+              <li><a href="../html/internships.html">Internship</a></li>
+              <li><a href="../html/all-workshops.html">Workshop</a></li>
+              <li><a href="../html/projects.html">Projects</a></li>
+              <li><a href="../html/software_install.html">Software Installation</a></li>
             </ul>
           </li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#team">Team</a></li>          
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="../html/index.html#gallery">Gallery</a></li>
+          <li><a href="../html/index.html#team">Team</a></li>          
+          <li><a href="../html/index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -151,7 +151,7 @@ $conn->close();
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="all-workshops.html">All Workshops</a></li>
+            <li><a href="../html/all-workshops.html">All Workshops</a></li>
             <li><?php echo htmlspecialchars($workshop['name'] ?? 'Workshop Details'); ?></li>
           </ol>
         </div>
@@ -165,9 +165,9 @@ $conn->close();
           <div class="col-lg-8">
             <div class="workshop-image animate-image">
               <?php if (!empty($workshop['image'])): ?>
-                <img src="assets/img/workshops/<?php echo htmlspecialchars($workshop['image']); ?>" alt="<?php echo htmlspecialchars($workshop['name']); ?>" class="img-fluid">
+                <img src="../assets/img/workshops/<?php echo htmlspecialchars($workshop['image']); ?>" alt="<?php echo htmlspecialchars($workshop['name']); ?>" class="img-fluid">
               <?php else: ?>
-                <img src="assets/img/workshops/default-workshop.jpg" alt="<?php echo htmlspecialchars($workshop['name'] ?? 'Workshop'); ?>" class="img-fluid">
+                <img src="../assets/img/workshops/default-workshop.jpg" alt="<?php echo htmlspecialchars($workshop['name'] ?? 'Workshop'); ?>" class="img-fluid">
               <?php endif; ?>
             </div>
 
@@ -288,7 +288,7 @@ $conn->close();
               <div class="sidebar-widget animate-fade-in">
                 <h3>Apply For An Workshop</h3>
                 <p>Join this workshop to learn hands-on skills.</p>
-                <a href="apply.php?id=<?php echo $workshop['id']; ?>" class="btn btn-primary w-100">Apply Now</a>
+                <a href="../php/apply.php?id=<?php echo $workshop['id']; ?>" class="btn btn-primary w-100">Apply Now</a>
               </div>
 
               <div class="sidebar-widget animate-fade-in">
@@ -297,10 +297,10 @@ $conn->close();
                   <?php if (count($related_workshops) > 0): ?>
                     <?php foreach ($related_workshops as $related): ?>
                       <div class="related-workshop-item">
-                        <img src="assets/img/workshops/<?php echo htmlspecialchars($related['icon']); ?>" alt="<?php echo htmlspecialchars($related['name']); ?>" class="img-fluid">
+                        <img src="../assets/img/workshops/<?php echo htmlspecialchars($related['icon']); ?>" alt="<?php echo htmlspecialchars($related['name']); ?>" class="img-fluid">
                         <div class="related-workshop-info">
                           <h4><?php echo htmlspecialchars($related['name']); ?></h4>
-                          <a href="workshop-details.php?id=<?php echo $related['id']; ?>" class="related-workshop-link">View Workshop <i class="bi bi-arrow-right"></i></a>
+                          <a href="../php/workshop-details.php?id=<?php echo $related['id']; ?>" class="related-workshop-link">View Workshop <i class="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
                     <?php endforeach; ?>
@@ -370,7 +370,7 @@ $conn->close();
           </div>
 
           <div class="col-lg-8">
-            <form action="contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="../php/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
@@ -472,13 +472,13 @@ $conn->close();
 
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

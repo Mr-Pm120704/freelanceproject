@@ -8,7 +8,7 @@ $project_id = isset($_GET['id']) ? $_GET['id'] : '';
 // Validate project ID to prevent SQL injection
 if (!is_numeric($project_id)) {
     // Redirect to projects page if ID is invalid
-    header("Location: projects.html");
+    header("Location: ../html/projects.html");
     exit();
 }
 
@@ -22,7 +22,7 @@ $result = $stmt->get_result();
 // Check if project exists
 if ($result->num_rows === 0) {
     // Redirect to projects page if project not found
-    header("Location: projects.html");
+    header("Location: ../html/projects.html");
     exit();
 }
 
@@ -102,8 +102,8 @@ $conn->close();
   <!-- End Google Tag Manager -->
 
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/logo.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -111,18 +111,18 @@ $conn->close();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
   <!-- Projects CSS File -->
-  <link href="assets/css/projects.css" rel="stylesheet">
+  <link href="../assets/css/projects.css" rel="stylesheet">
   <!-- Project Details CSS File -->
-  <link href="assets/css/project-details.css" rel="stylesheet">
+  <link href="../assets/css/project-details.css" rel="stylesheet">
 </head>
 
 <body>
@@ -134,29 +134,29 @@ $conn->close();
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
+        <img src="../assets/img/logo.png" alt="">
         <!-- <h1 class="sitename">Zara Tech</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Our Courses</a></li>
+          <li><a href="../html/index.html">Home</a></li>
+          <li><a href="../html/index.html#about">About</a></li>
+          <li><a href="../html/index.html#features">Our Courses</a></li>
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="all-courses.html">All Courses</a></li>
-              <li><a href="#">Internship</a></li>
-              <li><a href="#">Workshop</a></li>
-              <li><a href="projects.html" class="active">Projects</a></li>
-              <li><a href="software_install.html">Software Installation</a></li>
+              <li><a href="../html/all-courses.html">All Courses</a></li>
+              <li><a href="../html/internships.html">Internship</a></li>
+              <li><a href="../html/all-workshops.html">Workshop</a></li>
+              <li><a href="../html/projects.html" class="active">Projects</a></li>
+              <li><a href="../html/software_install.html">Software Installation</a></li>
             </ul>
           </li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#team">Team</a></li>          
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="../html/index.html#gallery">Gallery</a></li>
+          <li><a href="../html/index.html#team">Team</a></li>          
+          <li><a href="../html/index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -175,8 +175,8 @@ $conn->close();
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/projects.html">Projects</a></li>
             <li><?php echo htmlspecialchars($project['title']); ?></li>
           </ol>
         </div>
@@ -189,7 +189,7 @@ $conn->close();
         <div class="row">
           <div class="col-lg-6">
             <div class="project-image-container">
-              <img src="<?php echo htmlspecialchars($project['image_url']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>" class="img-fluid project-main-image">
+              <img src="../<?php echo htmlspecialchars($project['image_url']); ?>" alt="<?php echo htmlspecialchars($project['title']); ?>" class="img-fluid project-main-image">
               
               <?php if (!empty($project['gallery_images'])): ?>
               <div class="project-gallery">
@@ -307,7 +307,7 @@ $conn->close();
                 <?php foreach ($related_projects as $related): ?>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                   <div class="project-image">
-                    <img src="<?php echo htmlspecialchars($related['image_url']); ?>" alt="<?php echo htmlspecialchars($related['title']); ?>">
+                    <img src="../<?php echo htmlspecialchars($related['image_url']); ?>" alt="<?php echo htmlspecialchars($related['title']); ?>">
                     <div class="project-overlay">
                       <a href="project_details.php?id=<?php echo $related['id']; ?>" class="view-details">View Details</a>
                     </div>
@@ -432,7 +432,7 @@ $conn->close();
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="../html/index.html" class="logo d-flex align-items-center">
             <span class="sitename">Zara Tech</span>
           </a>
           <div class="footer-contact pt-3">
@@ -453,10 +453,10 @@ $conn->close();
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About us</a></li>
-            <li><a href="all-courses.html">All Courses</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/index.html#about">About us</a></li>
+            <li><a href="../html/all-courses.html">All Courses</a></li>
+            <li><a href="../html/projects.html">Projects</a></li>
             <li><a href="#">Privacy policy</a></li>
           </ul>
         </div>
@@ -494,14 +494,14 @@ $conn->close();
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

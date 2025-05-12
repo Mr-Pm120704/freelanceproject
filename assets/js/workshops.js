@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
           const workshopId = this.getAttribute('data-title-id');
           if (workshopId) {
-            window.location.href = `workshop-details.php?id=${workshopId}`;
+            window.location.href = `../php/workshop-details.php?id=${workshopId}`;
           } else {
             fetchWorkshopIdByName(title);
           }
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const preloader = document.getElementById('preloader');
       if (preloader) preloader.style.display = 'block';
   
-      fetch('get-workshops.php')
+      fetch('../php/get-workshops.php')
         .then(res => res.json())
         .then(data => {
           let foundId = null;
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
   
           if (foundId) {
-            window.location.href = `workshop-details.php?id=${foundId}`;
+            window.location.href = `../php/workshop-details.php?id=${foundId}`;
           } else {
             alert('Workshop not found.');
           }
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Load workshop data and set IDs
     const loadWorkshops = () => {
-      fetch('get-workshops.php')
+      fetch('../php/get-workshops.php')
         .then(res => res.json())
         .then(data => {
           Object.keys(data).forEach(category => {
