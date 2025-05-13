@@ -40,14 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify file extension
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         if(!array_key_exists($ext, $allowed)) {
-            header("Location: apply_form.php?status=error&message=Invalid file format. Only PDF files are allowed.");
+            header("Location: ../php/apply_form.php?status=error&message=Invalid file format. Only PDF files are allowed.");
             exit;
         }
         
         // Verify file size - 5MB maximum
         $maxsize = 5 * 1024 * 1024;
         if($filesize > $maxsize) {
-            header("Location: apply_form.php?status=error&message=File size is larger than the allowed limit.");
+            header("Location: ../php/apply_form.php?status=error&message=File size is larger than the allowed limit.");
             exit;
         }
         
@@ -68,15 +68,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if(move_uploaded_file($_FILES["resume"]["tmp_name"], $resumePath)) {
                 // File uploaded successfully
             } else {
-                header("Location: apply_form.php?status=error&message=Error uploading file.");
+                header("Location: ../php/apply_form.php?status=error&message=Error uploading file.");
                 exit;
             }
         } else {
-            header("Location: apply_form.php?status=error&message=There was a problem with your upload.");
+            header("Location: ../php/apply_form.php?status=error&message=There was a problem with your upload.");
             exit;
         }
     } else {
-        header("Location: apply_form.php?status=error&message=No resume uploaded or upload error.");
+        header("Location: ../php/apply_form.php?status=error&message=No resume uploaded or upload error.");
         exit;
     }
     
@@ -147,18 +147,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mail($to, $subject, $message, $headers);
         
         // Redirect to success page
-        header("Location: apply_form.php?status=success");
+        header("Location: ../php/apply-form.php?status=success");
         exit;
     } else {
         // Redirect to error page
-        header("Location: apply_form.php?status=error");
+        header("Location: ../php/apply-form.php?status=error");
         exit;
     }
     
     $stmt->close();
 } else {
     // If not a POST request, redirect to the form page
-    header("Location: apply_form.php");
+    header("Location: ../php/apply-form.php");
     exit;
 }
 

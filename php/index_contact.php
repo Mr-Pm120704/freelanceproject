@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
     if ($stmt->execute()) {
         echo "<script>
                 alert('Message sent successfully!');
-                window.location.href = 'index.html'; // change to your home page
+                window.location.href = '../html/index.html'; // change to your home page
               </script>";
     } else {
         echo "<script>

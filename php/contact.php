@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor1/autoload.php';
+require '../vendor1/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
@@ -14,22 +14,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.hostinger.com'; 
         $mail->SMTPAuth = true; 
-        $mail->Username = 'sales@fusionfathom.com';
-        $mail->Password = 'Fathom@2024'; 
+        $mail->Username = 'muruganandhamm7639@gmail.com'; //sales@fusionfathom.com
+        $mail->Password = 'xrjf vaoq lkfm hhqz';  //Fathom@2024
         $mail->SMTPSecure = 'ssl'; 
         $mail->Port = 465; 
         $mail->SMTPOptions = array(
             'ssl' => array(
                 'verify_peer' => false,
                 'verify_peer_name' => false,
-                'allow_self_signed' => trues
+                'allow_self_signed' => true
             )
         );
-        $mail->setFrom('sales@fusionfathom.com', 'Fusion Fathom Contact Form'); 
+        $mail->setFrom('muruganandhamm7639@gmail.com', 'Fusion Fathom Contact Form'); 
         $mail->addReplyTo($email, $name); 
 
         // Set the recipient email address
-        $mail->addAddress('sales@fusionfathom.com', 'Recipient Name');
+        $mail->addAddress('muruganandhamm7639@gmail.com', 'Recipient Name');
 
         // Email content
         $mail->isHTML(true); // Set email format to HTML
@@ -41,10 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                        <p><strong>Subject:</strong> $subject</p>
                        <p><strong>Message:</strong><br>$message</p>";
         $mail->send();
-        header("Location: index.html?status=success");
+        header("Location: ../html/index.html?status=success");
         exit();
     } catch (Exception $e) {
-        header("Location: index.html?status=error");
+        header("Location: ../html/index.html?status=error");
         exit();
     }
 }

@@ -3,7 +3,7 @@
       button.addEventListener('click', function (e) {
         e.preventDefault(); // Stop default anchor behavior
         const internshipId = this.getAttribute('data-id');
-        window.location.href = `apply-form.php?id=${internshipId}`;
+        window.location.href = `php/apply-form.php?id=${internshipId}`;
       });
     });
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (internshipId) {
           // Navigate to course details page with ID
-         window.location.href = `apply-form.php?id=${internshipId}`;
+         window.location.href = `php/apply-form.php?id=${internshipId}`;
         } 
       });
     });
