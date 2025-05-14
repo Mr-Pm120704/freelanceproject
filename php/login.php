@@ -21,7 +21,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Zara Tech - Login</title>
+  <title>Xoventa - Login</title>
   <meta name="description" content="Login to your Zara Tech account to access internship applications and more.">
 
   <!-- Favicons -->
@@ -616,7 +616,7 @@
     <div class="auth-image">
       <div class="auth-image-content">
         <h2>Welcome Back!</h2>
-        <p>Log in to access your account and explore internship opportunities at Zara Tech.</p>
+        <p>Log in to access your account and explore internship opportunities at Xoventa.</p>
         <img src="../assets/img/hero-img.png" alt="Login Illustration" style="max-width: 80%; margin-top: 20px;">
       </div>
     </div>

@@ -21,7 +21,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Zara Tech - Sign Up</title>
+  <title>Xoventa - Sign Up</title>
   <meta name="description" content="Create a new account at Zara Tech to apply for internships and more.">
 
   <!-- Favicons -->
@@ -591,7 +591,7 @@
   <div class="auth-container">
     <div class="auth-image">
       <div class="auth-image-content">
-        <h2>Join Zara Tech</h2>
+        <h2>Join Xoventa</h2>
         <p>Create an account to apply for internships and start your journey with us.</p>
         <img src="../assets/img/hero-img.png" alt="Signup Illustration" style="max-width: 80%; margin-top: 20px;">
       </div>
