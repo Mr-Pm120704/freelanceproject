@@ -122,11 +122,19 @@ $conn->close();
           <li><a href="../html/index.html#features">Our Workshops</a></li>
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
+<<<<<<< HEAD:workshop-details.php
+              <li><a href="all-courses.html">All Courses</a></li>
+              <li><a href="internships.html">Internship</a></li>
+              <li><a href="all-workshops.html" class="active">All Workshops</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="software_install.html">Software Installation</a></li>
+=======
               <li><a href="../html/all-workshops.html" class="active">All Workshops</a></li>
               <li><a href="../html/internships.html">Internship</a></li>
               <li><a href="../html/all-workshops.html">Workshop</a></li>
               <li><a href="../html/projects.html">Projects</a></li>
               <li><a href="../html/software_install.html">Software Installation</a></li>
+>>>>>>> dda3426b7d857e5d6e003f66b1e118d2ce8623ec:php/workshop-details.php
             </ul>
           </li>
           <li><a href="../html/index.html#gallery">Gallery</a></li>
