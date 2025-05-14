@@ -62,13 +62,14 @@
       align-items: center;
       justify-content: center;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      /* background-image:url("../assets/img/image4.jpg"); */
+      background: linear-gradient(-45deg,rgb(59, 195, 219),rgb(69, 101, 245),rgb(23, 26, 240),rgb(38, 3, 136));
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
       position: relative;
       overflow: hidden;
     }
-    
+/*     
     @keyframes gradient {
       0% {
         background-position: 0% 50%;
@@ -80,18 +81,20 @@
         background-position: 0% 50%;
       }
     }
-    
+     */
     /* Floating particles */
     body::before {
       content: '';
       position: absolute;
       width: 100%;
       height: 100%;
-      background: url('../assets/img/image2.webp');
+      background: url('../assets/img/image4.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
       animation: particles 20s linear infinite;
       opacity: 0.5;
     }
-    
+/*     
   @keyframes particles {
       0% {
         transform: translateX(10vh) rotate(280deg);
@@ -108,17 +111,17 @@
       100% {
         transform: translateX(-100vh) rotate(360deg);
       }
-    }
+    } */
     
     /* Enhanced Container Animation */
     .auth-container {
       display: flex;
       width: 1000px;
       max-width: 95%;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 15px 35px rgba(151, 147, 147, 0.4);
       backdrop-filter: blur(10px);
       transform: perspective(1000px);
       animation: container-appear 1s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -127,7 +130,7 @@
     
     .auth-container:hover {
       transform: perspective(1000px) translateY(-5px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 25px 50px rgba(31, 30, 30, 0.3);
     }
     
     @keyframes container-appear {

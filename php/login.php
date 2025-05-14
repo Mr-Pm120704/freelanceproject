@@ -43,12 +43,12 @@
   
   <style>
     :root {
-      --primary-color: #4154f1;
-      --secondary-color: #6c757d;
+      --primary-color:rgb(2, 16, 139);
+      --secondary-color:rgb(155, 210, 247);
       --success-color: #28a745;
       --danger-color: #dc3545;
       --light-color: #f8f9fa;
-      --dark-color: #343a40;
+      --dark-color:rgb(61, 66, 70);
       --transition-speed: 0.3s;
       --box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
     }
@@ -62,9 +62,9 @@
       align-items: center;
       justify-content: center;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background: linear-gradient(-45deg,rgb(59, 195, 219),rgb(69, 101, 245),rgb(23, 26, 240),rgb(38, 3, 136));
       background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
+      animation: gradient 30s ease infinite;
       position: relative;
       overflow: hidden;
     }
@@ -87,35 +87,19 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: url('../assets/img/image3.webp');
+      background: url('../assets/img/image1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
       animation: particles 20s linear infinite;
       opacity: 0.5;
     }
-    
-    @keyframes particles {
-      0% {
-        transform: translateX(10vh) rotate(280deg);
-      }
-      25% {
-        transform: translateY(-25vh) rotate(90deg);
-      }
-      50% {
-        transform: translateX(-50vh) rotate(180deg);
-      }
-      75% {
-        transform: translateY(-75vh) rotate(270deg);
-      }
-      100% {
-        transform: translateX(-100vh) rotate(360deg);
-      }
-    }
-    
+   
     /* Enhanced Container Animation */
     .auth-container {
       display: flex;
       width: 900px;
       max-width: 95%;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -143,7 +127,8 @@
     
     .auth-image {
       flex: 1;
-      background: linear-gradient(135deg, rgba(65, 84, 241, 0.9) 0%, rgba(116, 97, 255, 0.9) 100%), url('assets/img/login-bg.jpg');
+      /* background: linear-gradient(135deg, rgba(65, 84, 241, 0.9) 0%, rgba(116, 97, 255, 0.9) 100%), url('assets/img/login-bg.jpg'); */
+      background: rgba(0, 0, 0, 0.2);
       background-size: cover;
       background-position: center;
       display: flex;
@@ -203,7 +188,7 @@
         transform: translateY(0px);
       }
       50% {
-        transform: translateY(-15px);
+        transform: translateY(-30px);
       }
       100% {
         transform: translateY(0px);
@@ -297,10 +282,10 @@
     
     @keyframes highlight-field {
       0%, 100% {
-        box-shadow: 0 0 0 0 rgba(65, 84, 241, 0);
+        box-shadow: 0 0 0 0 rgba(72, 88, 231, 0);
       }
       50% {
-        box-shadow: 0 0 15px 5px rgba(65, 84, 241, 0.3);
+        box-shadow: 0 0 15px 5px rgba(46, 67, 252, 0.3);
       }
     }
     
@@ -741,65 +726,44 @@
             // Focus on the email input
             document.getElementById('email').focus();
           }, 200);
-          
-          // Setup sequential form activation
-          setupSequentialFormActivation();
-          
-        }, 500);
-      }
-      
-      // Function to setup sequential form activation
-      function setupSequentialFormActivation() {
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
-        const passwordGroup = document.getElementById('password-group');
-        const rememberGroup = document.getElementById('remember-group');
-        const submitGroup = document.getElementById('submit-group');
-        
-        // When email is filled, show password field
-        email.addEventListener('input', function() {
-          if (email.value.length >= 10 && !passwordGroup.classList.contains('visible')) {
-            passwordGroup.style.display = 'block';
+
+          const passwordGroup = document.getElementById('password-group');
+          const rememberGroup = document.getElementById('remember-group');
+          const submitGroup = document.getElementById('submit-group');
+          passwordGroup.style.display = 'block';
+          rememberGroup.style.display = 'block';
+          submitGroup.style.display = 'block';
+
+          setTimeout(() => {
+            passwordGroup.classList.add('visible');
+            passwordGroup.classList.add('active');
+            password.focus();
+          }, 300);
+
+          setTimeout(() => {
+            rememberGroup.classList.add('visible');
             
             setTimeout(() => {
-              passwordGroup.classList.add('visible');
-              passwordGroup.classList.add('active');
-              password.focus();
-            }, 300);
-          }
-        });
-        
-        // When password is filled, show remember me and submit button
-        password.addEventListener('input', function() {
-          if (password.value.length > 0 && !rememberGroup.classList.contains('visible')) {
-            rememberGroup.style.display = 'block';
-            submitGroup.style.display = 'block';
-            
-            setTimeout(() => {
-              rememberGroup.classList.add('visible');
+              submitGroup.classList.add('visible');
               
+              // Show auth links after submit button
+              authLinks.style.display = 'block';
               setTimeout(() => {
-                submitGroup.classList.add('visible');
+                authLinks.classList.add('visible');
                 
-                // Show auth links after submit button
-                authLinks.style.display = 'block';
-                setTimeout(() => {
-                  authLinks.classList.add('visible');
-                  
-                  // Show social login last
-                  if (socialLogin) {
-                    socialLogin.style.display = 'block';
-                    setTimeout(() => {
-                      socialLogin.classList.add('visible');
-                    }, 300);
-                  }
-                }, 300);
+                // Show social login last
+                if (socialLogin) {
+                  socialLogin.style.display = 'block';
+                  setTimeout(() => {
+                    socialLogin.classList.add('visible');
+                  }, 300);
+                }
               }, 300);
             }, 300);
-          }
-        });
+          }, 300);          
+        }, 500);
       }
-      
+     
       // Trigger animation on welcome prompt click
       welcomePrompt.addEventListener('click', revealFormElements);
       
