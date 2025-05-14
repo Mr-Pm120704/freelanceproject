@@ -171,11 +171,11 @@
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
 <<<<<<< HEAD:apply-form.php
-              <li><a href="all-courses.html">All Courses</a></li>
+              <!-- <li><a href="all-courses.html">All Courses</a></li>
               <li><a href="internships.html" class="active">Internship</a></li>
               <li><a href="all-workshops.html">Workshop</a></li>
               <li><a href="projects.html">Projects</a></li>
-              <li><a href="software_install.html">Software Installation</a></li>
+              <li><a href="software_install.html">Software Installation</a></li> -->
 =======
               <li><a href="../html/all-courses.html">All Courses</a></li>
               <li><a href="../html/internships.html" class="active">Internship</a></li>
