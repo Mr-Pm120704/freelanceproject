@@ -1,4 +1,6 @@
-CREATE DATABASE Xoventa;
+CREATE DATABASE IF NOT EXISTS Xoventa;
+
+
 USE Xoventa;
 
 -- Create courses table
@@ -144,10 +146,11 @@ CREATE TABLE IF NOT EXISTS software_contact (
   email VARCHAR(100) NOT NULL,
   service_category VARCHAR(50) NOT NULL,
   software_option VARCHAR(100),
-  custom_service VARCHAR(100), IF NOT EXISTS
+  custom_service VARCHAR(100),
   message TEXT NOT NULL,
   submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 
 -- Create users table
 CREATE TABLE IF NOT EXISTS users (
