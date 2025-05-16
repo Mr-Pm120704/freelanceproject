@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (courseId) {
           // Navigate to course details page with ID
-          window.location.href = `course-details.php?id=${courseId}`;
+          window.location.href = `../php/course-details.php?id=${courseId}`;
         } else {
           // If no ID is available, try to fetch it based on course name
           fetchCourseIdByName(courseName);
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Fetch all courses from the database
-    fetch('get-courses.php')
+    fetch('../php/get-courses.php')
       .then(response => response.json())
       .then(data => {
         let courseId = null;
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (courseId) {
           // Navigate to course details page
-          window.location.href = `course-details.php?id=${courseId}`;
+          window.location.href = `../php/course-details.php?id=${courseId}`;
         } else {
           console.error(`Course not found: ${courseName}`);
           alert('Course details not found. Please try again later.');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Load courses from database and update the DOM
   const loadCoursesFromDatabase = () => {
-    fetch('get-courses.php')
+    fetch('../php/get-courses.php')
       .then(response => response.json())
       .then(data => {
         // Update course items with database IDs

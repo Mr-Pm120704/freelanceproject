@@ -4,13 +4,18 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Include PHPMailer files
-require 'vendor1/phpmailer/phpmailer/src/PHPMailer.php';
-require 'vendor1/phpmailer/phpmailer/src/SMTP.php';
+require '../vendor1/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor1/phpmailer/phpmailer/src/SMTP.php';
 
 // Get form data
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
+$college = $_POST['college'];
+$degree = $_POST['degree'];
+$graduationYear = $_POST['graduationYear'];
+$startDate = $_POST['startDate'];
+$whyJoin = $_POST['whyJoin'];
 $workshopId = $_POST['workshop_id'];
 
 // Fetch workshop details
@@ -21,7 +26,7 @@ if (!$workshopQuery || $workshopQuery->num_rows == 0) {
 $workshop = $workshopQuery->fetch_assoc();
 
 // Insert application into DB
-$conn->query("INSERT INTO applications (workshop_id, name, email, phone) VALUES ('$workshopId', '$name', '$email', '$phone')");
+$conn->query("INSERT INTO applications (workshop_id, name, email, phone, college, degree, graduationYear, startDate, whyJoin) VALUES ('$workshopId', '$name', '$email', '$phone', '$college', '$degree', '$graduationYear', '$startDate', '$whyJoin')");
 
 // Email setup
 $mail = new PHPMailer(true);
@@ -57,7 +62,7 @@ try {
 
     echo "<script>
     alert('Application submitted successfully. Confirmation emails sented.');
-    window.location.href = 'all-workshops.html';
+    window.location.href = '../html/all-workshops.html';
     </script>";
 
 } catch (Exception $e) {
