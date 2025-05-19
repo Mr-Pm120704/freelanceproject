@@ -158,7 +158,7 @@ try {
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Zara Tech - Admin Dashboard</title>
+  <title>XOVENTA - Admin Dashboard</title>
   <meta name="description" content="Admin dashboard for Zara Tech to manage applications and users.">
 
   <!-- Favicons -->
@@ -766,7 +766,7 @@ try {
       <h1>Admin Dashboard</h1>
       <nav class="ms-auto">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../html/index.html">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
@@ -778,7 +778,7 @@ try {
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Welcome to Zara Tech Admin Panel</h5>
+              <h5 class="card-title">Welcome to Xoventa Admin Panel</h5>
               <p>Manage users, applications, and view analytics from this dashboard.</p>
             </div>
           </div>

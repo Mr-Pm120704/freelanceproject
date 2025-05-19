@@ -205,7 +205,7 @@ $workshop = $conn->query("SELECT * FROM workshops WHERE id = $workshopId")->fetc
         <div class="container">
           <ol>
             <li><a href="../html/index.html">Home</a></li>
-            <li><a href="../html/internships.html">WorkShop</a></li>
+            <li><a href="../html/all-workshops.html">All-WorkShops</a></li>
             <li>Application Form</li>
           </ol>
         </div>

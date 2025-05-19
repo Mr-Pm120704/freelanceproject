@@ -58,7 +58,7 @@ $conn->close();
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title><?php echo htmlspecialchars($workshop['name'] ?? 'Workshop Details'); ?> - XOVENTA</title>
+  <title>XOVENTA - <?php echo htmlspecialchars($workshop['name'] ?? 'Workshop Details'); ?></title>
   <meta name="description" content="<?php echo htmlspecialchars($workshop['short_description'] ?? ''); ?>">
   <meta name="keywords" content="XOVENTA, <?php echo htmlspecialchars($workshop['name'] ?? 'Workshop'); ?>, workshops, training, education">
 
@@ -151,7 +151,7 @@ $conn->close();
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="../html/all-workshops.html">All Workshops</a></li>
+            <li><a href="../html/all-workshops.html">All-Workshops</a></li>
             <li><?php echo htmlspecialchars($workshop['name'] ?? 'Workshop Details'); ?></li>
           </ol>
         </div>
