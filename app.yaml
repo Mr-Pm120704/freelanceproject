@@ -1,0 +1,8 @@
+runtime: php73
+
+handlers:
+- url: /
+  script: login.php
+
+- url: /(.*)
+  script: \1
