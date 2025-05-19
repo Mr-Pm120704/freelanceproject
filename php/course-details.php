@@ -59,7 +59,7 @@ $conn->close();
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title><?php echo htmlspecialchars($course['name'] ?? 'Course Details'); ?> - XOVENTA</title>
+  <title>XOVENTA - <?php echo htmlspecialchars($course['name'] ?? 'Course Details'); ?></title>
   <meta name="description" content="<?php echo htmlspecialchars($course['short_description'] ?? ''); ?>">
   <meta name="keywords" content="XOVENTA, <?php echo htmlspecialchars($course['name'] ?? 'Course'); ?>, courses, training, education">
 

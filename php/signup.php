@@ -21,7 +21,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Xoventa - Sign Up</title>
+  <title>XOVENTA - Sign Up</title>
   <meta name="description" content="Create a new account at Zara Tech to apply for internships and more.">
 
   <!-- Favicons -->

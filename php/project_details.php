@@ -80,7 +80,7 @@ $conn->close();
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Xoventa  Tech - <?php echo htmlspecialchars($project['title']); ?></title>
+  <title>XOVENTA - <?php echo htmlspecialchars($project['title']); ?></title>
   <meta name="description" content="<?php echo htmlspecialchars($project['short_description']); ?>">
   <meta name="keywords" content="Xoventa  Tech, projects, <?php echo htmlspecialchars($project['category']); ?>, portfolio">
 
