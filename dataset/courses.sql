@@ -1,4 +1,6 @@
-CREATE DATABASE Xoventa;
+CREATE DATABASE IF NOT EXISTS Xoventa;
+
+
 USE Xoventa;
 
 -- Create courses table

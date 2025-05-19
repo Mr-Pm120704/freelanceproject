@@ -80,9 +80,9 @@ $conn->close();
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Zara Tech - <?php echo htmlspecialchars($project['title']); ?></title>
+  <title>Xoventa  Tech - <?php echo htmlspecialchars($project['title']); ?></title>
   <meta name="description" content="<?php echo htmlspecialchars($project['short_description']); ?>">
-  <meta name="keywords" content="Zara Tech, projects, <?php echo htmlspecialchars($project['category']); ?>, portfolio">
+  <meta name="keywords" content="Xoventa  Tech, projects, <?php echo htmlspecialchars($project['category']); ?>, portfolio">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ8BY3WBPP"></script>
@@ -137,7 +137,7 @@ $conn->close();
       <a href="../html/index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="../assets/img/logo.png" alt="">
-        <!-- <h1 class="sitename">Zara Tech</h1> -->
+        <!-- <h1 class="sitename">Xoventa  Tech</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -147,13 +147,13 @@ $conn->close();
           <li><a href="../html/index.html#features">Our Courses</a></li>
           <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-<<<<<<< HEAD:project_details.php
+<<<<<<<<< Temporary merge branch 1:project_details.php
               <li><a href="all-courses.html">All Courses</a></li>
               <li><a href="internships.html">Internship</a></li>
               <li><a href="all-workshops.html">Workshop</a></li>
               <li><a href="projects.html" class="active">Projects</a></li>
               <li><a href="software_install.html">Software Installation</a></li>
-=======
+=========
               <li><a href="../html/all-courses.html">All Courses</a></li>
               <li><a href="../html/internships.html">Internship</a></li>
               <li><a href="../html/all-workshops.html">Workshop</a></li>
@@ -383,7 +383,7 @@ $conn->close();
               <div>
                 <h3>Email Us</h3>
                 <p>
-                  <a href="mailto:zaratechpvt001@gmail.com" class="email-link">zaratechpvt001@gmail.com</a>
+                  <a href="mailto:Xoventa techpvt001@gmail.com" class="email-link">Xoventa techpvt001@gmail.com</a>
                 </p>
               </div>
             </div>
@@ -441,20 +441,20 @@ $conn->close();
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="../html/index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Zara Tech</span>
+            <span class="sitename">Xoventa  Tech</span>
           </a>
           <div class="footer-contact pt-3">
             <p>Located in Perambalur</p>
             <p>Tamil Nadu 621212, India</p>
             <p class="mt-3"><strong>Phone:</strong> <a href="tel:+919342938725" class="call-link">+91 9342938725, 9159240651</a></p>
-            <p><strong>Email:</strong> <a href="mailto:zaratechpvt001@gmail.com" class="email-link">zaratechpvt001@gmail.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:Xoventa techpvt001@gmail.com" class="email-link">Xoventa techpvt001@gmail.com</a></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href="https://x.com/ZaraTech"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com/ZaraTech/"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ZaraTech/"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/ZaraTech/"><i class="bi bi-linkedin"></i></a>
-            <a href="https://wa.me/919566060511?text=I%20got%20your%20contact%20number%20from%20Zara%20Tech"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://x.com/Xoventa Tech"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/Xoventa Tech/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/Xoventa Tech/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/Xoventa Tech/"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/919566060511?text=I%20got%20your%20contact%20number%20from%20Xoventa %20Tech"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
@@ -488,9 +488,9 @@ $conn->close();
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright 2024</span> <strong class="px-1 sitename">Zara Tech</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright 2025</span> <strong class="px-1 sitename">Xoventa  Tech</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        Designed by <a href="">Zara Tech</a>
+        Designed by <a href="">Xoventa  Tech</a>
       </div>
     </div>
   </footer>
