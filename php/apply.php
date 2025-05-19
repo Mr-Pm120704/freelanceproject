@@ -183,7 +183,7 @@ $workshop = $conn->query("SELECT * FROM workshops WHERE id = $workshopId")->fetc
               <li><a href="../html/software_install.html">Software Installation</a></li>
             </ul>
           </li>
-          <li><a href="../html/index.html#gallery">Gallery</a></li>
+          <!-- <li><a href="../html/index.html#gallery">Gallery</a></li> -->
           <li><a href="../html/index.html#team">Team</a></li>          
           <li><a href="../html/index.html#contact">Contact</a></li>
         </ul>
