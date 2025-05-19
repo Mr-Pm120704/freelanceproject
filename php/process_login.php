@@ -66,7 +66,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
             
             // Redirect to dashboard
-            header("Location: ../html/index.html");
+            if($email == "adminxoventa@gmail.com"){
+                header("Location: ../php/admin.php");
+            }
+            else{
+                header("Location: ../html/index.html");
+            }
             exit();
         } else {
             // Invalid password
